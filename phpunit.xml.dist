@@ -14,4 +14,9 @@
             <directory suffix=".php">./tests/</directory>
         </testsuite>
     </testsuites>
+    <php>
+        <const name="BASE_URI" value=""/>
+        <const name="USERNAME" value=""/>
+        <const name="PASSWORD" value=""/>
+    </php>
 </phpunit>
