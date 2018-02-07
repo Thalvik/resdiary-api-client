@@ -32,7 +32,7 @@ class RdaClient {
 
 		try {
 
-		    $response = $this->getClient()->request('POST', 'Jwt/Token',[
+		    $response = $this->getClient()->request('POST', 'api/Jwt/Token',[
 		        'headers' => [
 		            'Content-Type' => 'application/json', 
 		            'Accept' => 'application/json'
