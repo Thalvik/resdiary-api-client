@@ -1,0 +1,21 @@
+{
+    "name": "thalvik/ResDiaryApiClient",
+    "description": "PHP client for ResDiary REST API",
+    "license": "MIT",
+    "keywords": ["resdiary"],
+    "authors": [
+        {
+            "name": "Aleksandar Andrijevic",
+            "email": "yu1nis@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Thalvik\\ResDiaryApiClient\\": "src"
+        }
+    }
+}
