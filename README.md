@@ -8,6 +8,9 @@ available endpoints. Check the ResDiary API documentation for available API call
 Currently the only endpoint is `Setup` on `Restaurant` service, but the rest will be added in
 the future.
 
+CURRENT STATUS: DEVELOPMENT!!!
+========
+
 Basic usage
 ------------------------
 
