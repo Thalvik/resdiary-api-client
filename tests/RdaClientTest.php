@@ -19,12 +19,14 @@ class RdaClientTest extends PHPUnit_Framework_TestCase {
 	}
  
 	public function testGetAccessToken(){
+
 		$rdaClient = new RDAClient([
 			'api_url' => $this->base_uri,
 			'username' => $this->username,
 			'password' => $this->password
 		]);
 		$rdaClient->setAccessToken(false);
+
 		$this->assertNotEmpty($rdaClient->getAccessToken());
 	}
 
@@ -47,14 +49,14 @@ class RdaClientTest extends PHPUnit_Framework_TestCase {
 
 
 		$now = new \DateTime();
-		$restaurantSetup = $rdaClient->getService('Restaurant') //Service name
-		->setMicroSiteName('SomeProvider') //Set microSiteName
+		$restaurantSetup = $rdaClient->getConsumerService('Restaurant') //Service name
+		->setMicroSiteName('TestProvider') //Set microSiteName
 		->getSetup([ //Call method
 			'date' => $now->format('Y-m-d'),
 			'channelCode' => 'ONLINE',
 		]);
 
-		$this->assertNotFalse($restaurantSetup);
+		$this->assertNotTrue($rdaClient->hasErrors());
 
 	}
 
