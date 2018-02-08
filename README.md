@@ -18,6 +18,10 @@ Run composer install to install necessary packages
 
 `composer install`
 
+
+Initalize the class with parameters
+
+
 ```php
 use Thalvik\ResDiaryApiClient\RdaClient;
 
@@ -48,7 +52,6 @@ if ($tokenClient != $tokenSaved) {
 ```
 You can then use client to call methods on available services
 ```php
-
 $now = new \DateTime();
 
 $restaurantSetup = $rdaClient->getConsumerService('Restaurant') //Service name
@@ -63,15 +66,15 @@ If there are some errors in client request, you can check them by calling `hasEr
 will return array with `Message` and `ValidationErrors`
 
 ```php
-	if ($rdaClient->hasErrors()) {
-		print_r($rdaClient->getErrors());
-		exit();
-	}
+if ($rdaClient->hasErrors()) {
+	print_r($rdaClient->getErrors());
+	exit();
+}
 ```
 
 Else, the call will return relevant data
 ```php
-	print_r($restaurantSetup);
+print_r($restaurantSetup);
 ```
 
 To run tests, fill the credentials in phpunit.xml.dist file
