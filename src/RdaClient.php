@@ -57,6 +57,7 @@ class RdaClient {
 	 * @param    array    $params       Array of credentials
 	 */
 	public function __construct($params = []) {
+		$this->errors = [];
     	$this->base_uri = $params['api_url'];
     	$this->username = $params['username'];
     	$this->password = $params['password'];
@@ -195,16 +196,24 @@ class RdaClient {
 
     }
 
-
+    /**
+	 * Returns errors
+	 *
+	 * @return    array    array with Message and ValidationErrors
+	 */
     public function getErrors () {
     	return $this->errors;
     }
 
+    /**
+	 * Check if there are errors in request
+	 *
+	 * @return    boolean    True on has errors, false if not
+	 */
     public function hasErrors (){
     	if (count($this->errors) > 0) {
     		return true;
     	}
-
     	return false;
     }
 
