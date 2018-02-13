@@ -38,26 +38,4 @@ class RdaClientTest extends PHPUnit_Framework_TestCase {
 		]);
 		$this->assertInstanceOf('GuzzleHttp\Client', $rdaClient->getClient());
 	}
-
-	public function testGetRestauranService(){
-		$rdaClient = new RDAClient([
-			'api_url' => $this->base_uri,
-			'username' => $this->username,
-			'password' => $this->password
-		]);
-		$rdaClient->setAccessToken(false);
-
-
-		$now = new \DateTime();
-		$restaurantSetup = $rdaClient->getConsumerService('Restaurant') //Service name
-		->setMicroSiteName('TestProvider') //Set microSiteName
-		->getSetup([ //Call method
-			'date' => $now->format('Y-m-d'),
-			'channelCode' => 'ONLINE',
-		]);
-
-		$this->assertNotTrue($rdaClient->hasErrors());
-
-	}
-
 }

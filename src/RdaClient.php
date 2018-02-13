@@ -188,8 +188,12 @@ class RdaClient {
     	$responseErrors = [];
     	if ($exception->hasResponse()) {
 	    	$responseObj = GuzzleHttp\json_decode($exception->getResponse()->getBody());
+	    	
 	    	if (property_exists($responseObj, 'Message')) {
 	    		$this->errors['Message'] = $responseObj->Message;
+	    	}
+
+	    	if (property_exists($responseObj, 'ValidationErrors')) {
 	    		$this->errors['ValidationErrors'] = $responseObj->ValidationErrors;
 	    	}
 	    }
