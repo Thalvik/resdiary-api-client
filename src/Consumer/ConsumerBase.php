@@ -57,6 +57,25 @@ class ConsumerBase {
 	 * @var      integer    $customerId    Customer ID
 	 */
 	private $customerId;
+
+
+	/**
+	 * Menu name
+	 *
+	 * @access   private
+	 * @var      string    $menuName    Menu name
+	 */
+	private $menuName;
+	
+
+	/**
+	 * Review ID
+	 *
+	 * @access   private
+	 * @var      integer    $reviewId    Review ID
+	 */
+	private $reviewId;
+
 	
 
 	/**
@@ -166,5 +185,50 @@ class ConsumerBase {
 	 */
     public function getCustomerId() {
     	return $this->customerId;
+    }
+
+
+    /**
+	 * Sets menu name
+	 *
+	 * @param    string    $menuName      The menu name
+	 * @return   object    Instance of ConsumerBase
+	 */
+    public function setMenuName($menuName) {
+    	$this->menuName = $menuName;
+    	return $this;
+    }
+
+
+    /**
+	 * Returns the menu name
+	 *
+	 * @return    string    Menu name
+	 */
+    public function getMenuName() {
+    	return $this->menuName;
+    }
+
+
+
+    /**
+	 * Sets Review ID
+	 *
+	 * @param    integer   $reviewId      The Review ID
+	 * @return   object    Instance of ConsumerBase
+	 */
+    public function setReviewId($reviewId) {
+    	$this->reviewId = $reviewId;
+    	return $this;
+    }
+
+
+    /**
+	 * Returns the Review ID
+	 *
+	 * @return    integer    The Review ID
+	 */
+    public function getReviewId() {
+    	return $this->reviewId;
     }
 }
