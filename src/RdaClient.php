@@ -187,6 +187,12 @@ class RdaClient {
     public function handleException ($exception) {
     	$responseErrors = [];
     	if ($exception->hasResponse()) {
+    		$statusCode = $exception->getResponse()->getStatusCode();
+    		if ($statusCode == 404) {
+    			$this->errors['Message'] = $exception->getResponse()->getReasonPhrase();
+    			$this->errors['ValidationErrors'] = [];
+    			return;
+    		}
 	    	$responseObj = GuzzleHttp\json_decode($exception->getResponse()->getBody());
 	    	
 	    	if (property_exists($responseObj, 'Message')) {

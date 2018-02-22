@@ -48,6 +48,15 @@ class ConsumerBase {
 	 * @var      string    $campaignName    Campaign name
 	 */
 	private $campaignName;
+
+
+	/**
+	 * Customer ID
+	 *
+	 * @access   private
+	 * @var      integer    $customerId    Customer ID
+	 */
+	private $customerId;
 	
 
 	/**
@@ -134,5 +143,28 @@ class ConsumerBase {
 	 */
     public function getCampaignName() {
     	return $this->campaignName;
+    }
+
+
+
+    /**
+	 * Sets Customer ID
+	 *
+	 * @param    integer   $customerId      The Customer ID
+	 * @return   object    Instance of ConsumerBase
+	 */
+    public function setCustomerId($customerId) {
+    	$this->customerId = $customerId;
+    	return $this;
+    }
+
+
+    /**
+	 * Returns the Customer ID
+	 *
+	 * @return    integer    The Customer ID
+	 */
+    public function getCustomerId() {
+    	return $this->customerId;
     }
 }
