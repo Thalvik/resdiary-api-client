@@ -1,5 +1,5 @@
 {
-    "name": "thalvik/ResDiaryApiClient",
+    "name": "thalvik/resdiary-api-client",
     "description": "PHP client for ResDiary REST API",
     "license": "MIT",
     "keywords": ["resdiary"],
