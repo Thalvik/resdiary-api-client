@@ -6,9 +6,6 @@ HTTP wrapper around Guzzle HTTP client library. It then communicates with ResDia
 available endpoints. Check the ResDiary API documentation for available API calls.
 
 
-CURRENT STATUS: DEVELOPMENT!!!
-========
-
 Basic usage
 ------------------------
 
