@@ -5,8 +5,6 @@ This is an unoffical PHP client for ResDiary API. It includes basic HTTP client,
 HTTP wrapper around Guzzle HTTP client library. It then communicates with ResDiary API by calling 
 available endpoints. Check the ResDiary API documentation for available API calls.
 
-Currently the only endpoint is `Setup` on `Restaurant` service, but the rest will be added in
-the future.
 
 CURRENT STATUS: DEVELOPMENT!!!
 ========
