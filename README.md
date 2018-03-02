@@ -9,9 +9,9 @@ available endpoints. Check the ResDiary API documentation for available API call
 Basic usage
 ------------------------
 
-Run composer install to install necessary packages
+Run composer
 
-`composer install`
+`composer require thalvik/resdiary-api-client`
 
 
 Initalize the class with parameters
