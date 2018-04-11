@@ -26,6 +26,7 @@ class Booking extends ConsumerBase {
 
     	try {
     		$rdaClient = parent::getParentObject();
+    		$rdaClient->setHeaders();
 		    $response = $rdaClient->getClient()->request('POST', 'api/ConsumerApi/v1/Restaurant/' . $this->getMicroSiteName() . '/Booking/' . $this->getBookingReference() . '/Authenticate',[
 		        'headers' => $rdaClient->getHeaders(),
 		        'json' => $params
@@ -49,6 +50,7 @@ class Booking extends ConsumerBase {
 
     	try {
     		$rdaClient = parent::getParentObject();
+    		$rdaClient->setHeaders();
 		    $response = $rdaClient->getClient()->request('POST', 'api/ConsumerApi/v1/Restaurant/' . $this->getMicroSiteName() . '/Booking/' . $this->getBookingReference() . '/Cancel/',[
 		        'headers' => $rdaClient->getHeaders(),
 		        'json' => $params
@@ -72,9 +74,10 @@ class Booking extends ConsumerBase {
 
     	try {
     		$rdaClient = parent::getParentObject();
+    		$rdaClient->setHeaders();
 		    $response = $rdaClient->getClient()->request('POST', 'api/ConsumerApi/v1/Restaurant/' . $this->getMicroSiteName() . '/BookingWithStripeToken/',[
 		        'headers' => $rdaClient->getHeaders(),
-		        'json' => $params
+		        'body' => json_encode($params),
 		    ]);
 
 		    return GuzzleHttp\json_decode($response->getBody());
@@ -95,6 +98,7 @@ class Booking extends ConsumerBase {
 
     	try {
     		$rdaClient = parent::getParentObject();
+    		$rdaClient->setHeaders();
 		    $response = $rdaClient->getClient()->request('GET', 'api/ConsumerApi/v1/Restaurant/' . $this->getMicroSiteName() . '/Bookings',[
 		        'headers' => $rdaClient->getHeaders(),
 		        'query' => $params
@@ -118,6 +122,7 @@ class Booking extends ConsumerBase {
 
     	try {
     		$rdaClient = parent::getParentObject();
+    		$rdaClient->setHeaders();
 		    $response = $rdaClient->getClient()->request('GET', 'api/ConsumerApi/v1/Restaurant/' . $this->getMicroSiteName() . '/Booking/' . $this->getBookingReference(),[
 		        'headers' => $rdaClient->getHeaders(),
 		        'query' => $params
@@ -141,6 +146,7 @@ class Booking extends ConsumerBase {
 
     	try {
     		$rdaClient = parent::getParentObject();
+    		$rdaClient->setHeaders();
 		    $response = $rdaClient->getClient()->request('PUT', 'api/ConsumerApi/v1/Restaurant/' . $this->getMicroSiteName() . '/Booking/' . $this->getBookingReference(),[
 		        'headers' => $rdaClient->getHeaders(),
 		        'json' => $params
@@ -164,6 +170,7 @@ class Booking extends ConsumerBase {
 
     	try {
     		$rdaClient = parent::getParentObject();
+    		$rdaClient->setHeaders();
 		    $response = $rdaClient->getClient()->request('PUT', 'api/ConsumerApi/v1/Restaurant/' . $this->getMicroSiteName() . '/Booking/' . $this->getBookingReference() . '/FunctionSheet',[
 		        'headers' => $rdaClient->getHeaders(),
 		        'json' => $params
