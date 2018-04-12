@@ -140,7 +140,7 @@ class RdaClient {
 	public function setClient() {
 		$this->client = new GuzzleHttp\Client([
 		    'base_uri' => $this->base_uri,
-		    'timeout'  => 2.0,
+		    'timeout'  => 20.0,
 		]);
 
 		return $this;
